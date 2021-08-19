@@ -1,0 +1,11 @@
+{
+  "name": "rubbish-bins-backend",
+  "version": "0.0.1",
+  "description": "Local app to manage Firestore for rubbish-bins site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Torbjorn van Heeswijck",
+  "license": "ISC"
+}
