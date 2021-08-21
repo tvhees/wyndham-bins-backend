@@ -9,7 +9,7 @@
     "author": "Torbjorn van Heeswijck",
     "license": "ISC",
     "devDependencies": {
-        "firebase": "^8.9.1",
+        "firebase": "^8.10.0",
         "typescript": "^4.3.5"
     },
     "dependencies": {
