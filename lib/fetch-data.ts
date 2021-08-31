@@ -17,7 +17,11 @@ const fetch = async (): Promise<any> => {
     });
 
     var db = firebase.firestore();
-    await db.collection('features').add(data);
+    await db.collection('features').add({
+        ...data,
+        // This uses client timestamp - since we control the server and just want this for document ordering, that should be ok
+        createdAt: firebase.firestore.Timestamp.now()
+    });
 };
 
 fetch().then(() => {
