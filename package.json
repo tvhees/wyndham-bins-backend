@@ -4,7 +4,8 @@
     "description": "Local app to manage Firestore for rubbish-bins site",
     "main": "index.js",
     "scripts": {
-        "fetch": "npx ts-node -r dotenv/config ./lib/fetch-data.ts"
+        "fetch-dev": "ts-node -r dotenv/config ./lib/fetch-data.ts",
+        "fetch": "ts-node ./lib/fetch-data.ts"
     },
     "author": "Torbjorn van Heeswijck",
     "license": "ISC",
@@ -14,6 +15,8 @@
     },
     "dependencies": {
         "axios": "^0.21.1",
-        "dotenv": "^10.0.0"
+        "dotenv": "^10.0.0",
+        "firebase-admin": "^9.11.1",
+        "ts-node": "^10.2.1"
     }
 }
