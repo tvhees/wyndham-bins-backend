@@ -1,0 +1,26 @@
+# This action periodically runs the fetch script for staging
+
+name: fetch-data-staging
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: staging
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm ci
+      - run: npm run fetch
+        env:
+          APP_STAGE: staging
+          APP_SERVICE_ACCOUNT: ${{ secrets.APP_SERVICE_ACCOUNT }}

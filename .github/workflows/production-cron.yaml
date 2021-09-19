@@ -1,6 +1,6 @@
-# This action periodically runs the fetch script
+# This action periodically runs the fetch script for production
 
-name: fetch-data-cron
+name: fetch-data-production
 
 on:
   schedule:
@@ -20,5 +20,5 @@ jobs:
       - run: npm ci
       - run: npm run fetch
         env:
-          APP_STAGE: development
+          APP_STAGE: production
           APP_SERVICE_ACCOUNT: ${{ secrets.APP_SERVICE_ACCOUNT }}
