@@ -4,7 +4,7 @@
     "description": "Local app to manage Firestore for rubbish-bins site",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "fetch": "npx ts-node -r dotenv/config ./lib/fetch-data.ts"
     },
     "author": "Torbjorn van Heeswijck",
     "license": "ISC",
@@ -13,6 +13,7 @@
         "typescript": "^4.3.5"
     },
     "dependencies": {
-        "axios": "^0.21.1"
+        "axios": "^0.21.1",
+        "dotenv": "^10.0.0"
     }
 }
